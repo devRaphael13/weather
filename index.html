@@ -3,53 +3,60 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css" />
         <title>Weather App</title>
     </head>
     <body>
         <section class="container">
             <nav>
-                <h3>Name</h3>
-                <p>Date</p>
+                <h3>Weather</h3>
+                <p id="date">Date</p>
+                <p>&nbsp;</p>
             </nav>
 
             <main>
                 <div>
-                    <h1>20 degrees</h1>
+                    <h1><span id="temp">20</span>&deg;</h1>
                     <div>
-                        <div>Wind Speed</div>
-                        <div>Humidity</div>
+                        <div class="info">
+                            <svg
+                                width="46"
+                                height="46"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.59 4.59A2 2 0 1 1 11 8H2"></path>
+                                <path d="M12.59 19.41A2 2 0 1 0 14 16H2"></path>
+                                <path d="M17.73 7.73A2.5 2.5 0 1 1 19.5 12H2"></path>
+                            </svg>
+                            <p id="windspeed">61.1 mph</p>
+                        </div>
+
+                        <div class="info">
+                            <svg
+                                width="46"
+                                height="46"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="m12 2.69 5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                            </svg>
+                            <p id="humidity">90%</p>
+                        </div>
                     </div>
                 </div>
-                <h2>Cloudy</h2>
+                <h2 id="text">Cloudy</h2>
             </main>
 
-            <div class="weeklyforcast">
-                <article>
-                    <h3>Day</h3>
-                    <h1>Temp</h1>
-                    <p>Text</p>
-                </article>
-                <article>
-                    <h3>Day</h3>
-                    <h1>Temp</h1>
-                    <p>Text</p>
-                </article>
-                <article>
-                    <h3>Day</h3>
-                    <h1>Temp</h1>
-                    <p>Text</p>
-                </article>
-                <article>
-                    <h3>Day</h3>
-                    <h1>Temp</h1>
-                    <p>Text</p>
-                </article>
-                <article>
-                    <h3>Day</h3>
-                    <h1>Temp</h1>
-                    <p>Text</p>
-                </article>
+            <div id="weeklyforcast" class="weeklyforcast">
                 <article>
                     <h3>Day</h3>
                     <h1>Temp</h1>
@@ -58,38 +65,30 @@
             </div>
         </section>
 
-        <aside>
-            <h1>Time</h1>
+        <aside class="aside">
+            <div>
+                <h1 id="place">London</h1>
+                <h1 id="time">12:45 PM</h1>
+            </div>
             <form action="." method="post" id="country_form">
-                <input type="text" name="country" id="country" placeholder="Country">
-                <button>SVG submit</button>
+                <input type="text" name="country" id="country" placeholder="Country" />
+                <button type="submit">
+                    <svg
+                        width="46"
+                        height="46"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 3a8 8 0 1 0 0 16 8 8 0 1 0 0-16z"></path>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
             </form>
-            <div class="hourlyforcast">
-                <article>
-                    <h3>Hour</h3>
-                    <h1>Temp</h1>
-                    <p>Text</p>
-                </article>
-                <article>
-                    <h3>Hour</h3>
-                    <h1>Temp</h1>
-                    <p>Text</p>
-                </article>
-                <article>
-                    <h3>Hour</h3>
-                    <h1>Temp</h1>
-                    <p>Text</p>
-                </article>
-                <article>
-                    <h3>Hour</h3>
-                    <h1>Temp</h1>
-                    <p>Text</p>
-                </article>
-                <article>
-                    <h3>Hour</h3>
-                    <h1>Temp</h1>
-                    <p>Text</p>
-                </article>
+            <div id="hourlyforcast" class="hourlyforcast">
                 <article>
                     <h3>Hour</h3>
                     <h1>Temp</h1>

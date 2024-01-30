@@ -1,9 +1,145 @@
 :root {
-    --slate-950: #020617;
-    --slate-900: #0f172a;
-    --slate-100: #f1f5f9;
+    --gray-dark: #4b5563;
+    --gray-mid: #9ca3af;
+    --gray-light: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+h1,
+h2,
+h3 {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+button {
+    background: none;
 }
 
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    padding: 2rem;
+    color: #334155;
+}
+
+.container {
+    width: 70%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav>* {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+main>div {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+main h1 {
+    font-weight: bold;
+    font-size: 12rem;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.info>svg {
+    width: 2rem;
+}
+
+.info>p {
+    font-size: 1.5rem;
+}
+
+.weeklyforcast {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 4rem;
+}
+
+article {
+    padding: 2rem;
+    border: 2px solid var(--gray-mid);
+    border-radius: 0.5rem;
+}
+
+.aside {
+    width: 30%;
+    background-color: var(--gray-light);
+    padding: 4rem 2rem 2rem 2rem;
+    border-radius: 1rem;
+}
+
+.aside>div:first-child {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.aside>div:first-child h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+input {
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 2px solid var(--gray-mid);
+    outline-color: var(--gray-mid);
+    position: relative;
+    font-size: large;
+}
+
+input::placeholder {
+    font-style: italic;
+}
+
+button {
+    color: white;
+    position: absolute;
+    right: 11.125rem;
+    top: 11.3rem;
+    background: var(--gray-dark);
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button > svg {
+    width: 1.75rem;
+}
+
+.hourlyforcast {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 4rem;
 }
