@@ -37,13 +37,14 @@ function today(weather, location) {
 }
 
 function hourly(hours, time) {
+    let forecast = ""
     time = new Date(time).getHours()
-    let need = hours.slice(time, time + 9)
-    if (need.length < 9) {
-        need.push(...hours.slice(0, 9 - need.length))
+    let forecastHrs = hours.slice(time, time + 9)
+    if (forecastHrs.length < 9) {
+        forecastHrs.push(...hours.slice(0, 9 - forecastHrs.length))
     }
-    need.forEach((hr) => {
-        hourlyforecast.innerHTML += `
+    forecastHrs.forEach((hr) => {
+        forecast += `
             <article>
                 <h3>${new Date(hr.time).getHours()}:00</h3>
                 <h1>${hr.temp_c}&deg;</h1>
@@ -51,14 +52,16 @@ function hourly(hours, time) {
             </article>
         `;
     })
+    hourlyforecast.innerHTML = forecast
 }
 
 function weekly(days) {
+    let forecast = "";
     const week = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"]
     days = days.slice(1)
 
     days.forEach((day) => {
-        weeklyforecast.innerHtml += `
+        forecast += `
             <article>
                 <h3>${week[new Date(day.date).getDay()]}</h3>
                 <h1>${day.day.avgtemp_c}&deg;</h1>
@@ -66,6 +69,7 @@ function weekly(days) {
             </article>
         `;
     })
+    weeklyforecast.innerHTML = forecast
 }
 
 async function retrieve (place) {
