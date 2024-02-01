@@ -73,7 +73,7 @@ function weekly(days) {
 }
 
 async function retrieve (place) {
-        let data = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=e0a42835c0374abcb4a141107243001&q=${place}&days=7&aqi=no&alerts=no`);
+        let data = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=e0a42835c0374abcb4a141107243001&q=${place}&days=7&aqi=no&alerts=no`);
         data = await data.json();
         return data;
     };
